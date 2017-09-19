@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>rest-template</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="jquery-3.2.1.min.js"></script>
-        <script language="javascript">
-            $(document).ready(function() {
-				$.get("rest/thepath", function(data){
-					$("#myid").html(data);
-				});
-            });
-        </script>
-    </head>
+<head>
+    <title>Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
 
-    <body>
-        <div id="myid"></div>
-    </body>
+<body>
+<div>
+    <div id="menu">
+    <ul>
+       <!-- <li><div id="pictureMenu"><img src="quiz.jpg"></div></li>-->
+        <li><a href="CreateQuiz.html">Create quiz</a></li>
+        <li><a href="JoinQuiz.html">Join quiz</a></li>
+        <li><a href="">See scoreboard</a></li>
+    </ul>
+    </div>
+    <div id="welcomePage">
+        <h2>Welcome to Camilla's Quiz</h2>
+    </div>
+</div>
+
+</body>
 </html>
 

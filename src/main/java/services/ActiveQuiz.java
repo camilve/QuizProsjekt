@@ -7,25 +7,28 @@ import java.util.HashMap;
  */
 public class ActiveQuiz {
     private Quiz quiz;
-    HashMap<String, Integer> quizzers = new HashMap<String, Integer>();
+    HashMap<String, Integer> quizzers = new HashMap<String, Integer>(); //nickname with points
     private int spmnr = 0;
     private int antspm;
 
     public ActiveQuiz(Quiz quiz, String nickname) {
         this.quiz = quiz;
         quizzers.put(nickname, 0);
-        antspm = quiz.getSpørsmål().length;
+        antspm = quiz.getQuestion().length;
     }
 
-    public void addDeltaker(String nickname) {
+    public void addParticipant(String nickname) {
         quizzers.put(nickname, 0);
     }
 
-    public void giPoeng(String nickname, int svar) {
+    public void givePoints(String nickname, int answer) {
         if(quizzers.containsKey(nickname)) {
-            if(quiz.getSpørsmål()[spmnr].getRiktig() == svar){
-                int antPoeng = quizzers.get(nickname);
-                quizzers.put(nickname, antPoeng++);
+            int[] correctAnswers = quiz.getQuestion()[spmnr].getCorrect();
+            for(int i=0; i<correctAnswers.length; i++) {
+                if(correctAnswers[i] == answer){
+                    int points = quizzers.get(nickname);
+                    quizzers.put(nickname, points++);
+                }
             }
         }
     }

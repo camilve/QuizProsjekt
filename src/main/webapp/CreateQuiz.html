@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="CreateQuiz.js"></script>
+</head>
+<body>
+
+<div>
+    <div id="menu">
+        <ul>
+            <!-- <li><div id="pictureMenu"><img src="quiz.jpg"></div></li>-->
+            <li><a href="CreateQuiz.html" class="active">Create quiz</a></li>
+            <li><a href="JoinQuiz.html">Join quiz</a></li>
+            <li><a href="">See scoreboard</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Create new quiz</h1>
+        <br>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <label>Quizname: </label>
+                <input id="QuizName" class="inputfieldQuiz">
+                <br>
+                <label>Start time: </label>
+                <input id="timepicker" class="inputfieldQuiz" value="yyyy-mm-dd hh:mm" />
+            </div>
+        </div>
+        <div id="questions" class="container-fluid bg-3 text-center">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Question: <input type="text" id="question-1"> </h3>
+                    <label>(Check of the correct answers)</label>
+                </div>
+                <div class="col-sm-4">
+                    <br>
+                    <label>Time (seconds): </label>
+                    <select id="timeQuestion-1">
+                        <option value="10">10 sec</option>
+                        <option value="20">20 sec</option>
+                        <option value="30">30 sec</option>
+                        <option value="40">40 sec</option>
+                        <option value="50">50 sec</option>
+                        <option value="60">60 sec</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Answer 1: </label>
+                    <input name="correctAnswer" type="text" id="answer1-1">
+                    <input name="correctAnswer1-1" type="checkbox">
+                </div>
+                <div class="col-sm-6">
+                    <label>Answer 2: </label>
+                    <input name="correctAnswer" type="text" id="answer2-1">
+                    <input name="correctAnswer2-1" type="checkbox">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Answer 3: </label>
+                    <input name="correctAnswer" type="text" id="answer3-1">
+                    <input name="correctAnswer3-1" type="checkbox">
+                </div>
+                <div class="col-sm-6">
+                    <label>Answer 4: </label>
+                    <input name="correctAnswer" type="text" id="answer4-1">
+                    <input name="correctAnswer4-1" type="checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="submit" value="Add question" id="addQuestion">
+            </div>
+            <div class="col-sm-12">
+                <input type="submit" value="Finish!" id="addQuiz" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
