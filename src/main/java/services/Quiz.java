@@ -1,22 +1,39 @@
 package services;
 
-import java.util.Date;
-
 /**
  * Created by Camilla Velvin on 14.09.2017.
  */
 public class Quiz {
+    private String quizName;
     private Question[] questions;
-    private Date tid;
+    private String time;
 
-    public Quiz(Question[] questions, Date tid) {
+    public Quiz() {}
+    public Quiz(String quizName, Question[] questions, String time) {
+        this.quizName = quizName;
         this.questions = questions;
-        this.tid = tid;
+        this.time = time;
     }
-    public Question[] getQuestion() {
+    public Question[] getQuestions() {
         return questions;
     }
-    public Date getTid() {
-        return tid;
+    public String getTime() {
+        return time;
+    }
+
+    public String getQuizName() {
+        return quizName;
+    }
+
+    public void setQuizName(String quizName) {
+        this.quizName = quizName;
+    }
+
+    public void setQuestions(Question[] questions) {
+        this.questions = questions;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

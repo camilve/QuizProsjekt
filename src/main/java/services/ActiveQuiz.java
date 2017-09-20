@@ -1,41 +1,67 @@
 package services;
 
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * Created by Camilla Velvin on 14.09.2017.
  */
 public class ActiveQuiz {
     private Quiz quiz;
-    HashMap<String, Integer> quizzers = new HashMap<String, Integer>(); //nickname with points
+    private String id;
+    private ArrayList<Participant> quizzers = new ArrayList<Participant>(); //nickname with points
     private int spmnr = 0;
-    private int antspm;
+    private int questionCount;
 
-    public ActiveQuiz(Quiz quiz, String nickname) {
+    public ActiveQuiz() {
+    }
+    public ActiveQuiz(Quiz quiz) {
         this.quiz = quiz;
-        quizzers.put(nickname, 0);
-        antspm = quiz.getQuestion().length;
+        id = UUID.randomUUID().toString().replace("-", "");
+        questionCount = quiz.getQuestions().length;
     }
 
+    public Quiz getQuiz() {
+        return quiz;
+    }
+    public void setQuiz(Quiz quiz) {
+        this.quiz = quiz;
+    }
+    public String getId (){
+        return id;
+    }
     public void addParticipant(String nickname) {
-        quizzers.put(nickname, 0);
+        quizzers.add(new Participant(nickname));
     }
 
     public void givePoints(String nickname, int answer) {
-        if(quizzers.containsKey(nickname)) {
-            int[] correctAnswers = quiz.getQuestion()[spmnr].getCorrect();
-            for(int i=0; i<correctAnswers.length; i++) {
-                if(correctAnswers[i] == answer){
-                    int points = quizzers.get(nickname);
-                    quizzers.put(nickname, points++);
+        int[] correctAnswers = quiz.getQuestions()[spmnr].getCorrect();
+        for(int j=0; j<correctAnswers.length; j++) {
+            if(correctAnswers[j] == answer) {
+                for(int i=0; i<quizzers.size(); i++) {
+                    if(quizzers.get(i).getNickname().equals(nickname)) {
+                        int point = quizzers.get(i).getPoints();
+                        quizzers.get(i).setPoints(point+1);
+                    }
                 }
             }
         }
     }
-    public void nesteSpørsmål() {
-        if(spmnr < antspm) {
+    public void nextQuestion() {
+        if(spmnr < questionCount) {
             spmnr++;
         }
+    }
+
+    public List<Participant> scoreboard() {
+        ArrayList<Participant> scoreBoard = quizzers;
+
+        Collections.sort(scoreBoard);
+        int length = 4;
+        if(length > scoreBoard.size()) {
+            length = scoreBoard.size();
+        }
+
+        return scoreBoard.subList(0,length);
     }
 
 }

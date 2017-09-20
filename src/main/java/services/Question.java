@@ -10,6 +10,7 @@ public class Question {
     private String url;
     double seconds;
 
+    public Question() {}
     public Question(String question, String[] answers, int[] correct, String url, double seconds) {
         this.question = question;
         this.answers = answers;
@@ -22,7 +23,7 @@ public class Question {
         return correct;
     }
 
-    public void setRiktig(int riktig) {
+    public void setCorrect(int[] correct) {
         this.correct = correct;
     }
 

@@ -1,1 +1,6 @@
-services\AService.class
+services\QuizController.class
+services\ActiveQuiz.class
+services\Quiz.class
+services\Participant.class
+services\Question.class
+services\QuizService.class

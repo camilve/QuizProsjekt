@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JoinQuiz.js"></script>
 </head>
 <body>
 <div id="menu">
@@ -14,6 +17,23 @@
         <li><a href="JoinQuiz.html" class="active">Join quiz</a></li>
         <li><a href="">See scoreboard</a></li>
     </ul>
+</div>
+<div>
+    <div>
+        <h1>Click on a quiz to join </h1>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Quizname</th>
+                <th>Start time</th>
+            </tr>
+            <tr class="clickable-row" data-hfref="CreateQuiz.html">
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 </body>
