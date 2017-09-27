@@ -144,7 +144,7 @@ $(document).ready(function () {
         } else {
             $("#showQuestion").append(``);
             $("#showPicture").append(``);
-            window.location.href = "../JoinQuiz.html";
+            window.location.href = "JoinQuiz.html";
         }
     };
 

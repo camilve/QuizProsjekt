@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc5b41f-8168-4718-bdc1-86fde0248f73" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/ActiveQuiz.java" afterPath="$PROJECT_DIR$/src/main/java/entities/ActiveQuiz.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/HelperClass.java" afterPath="$PROJECT_DIR$/src/main/java/entities/HelperClass.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/Participant.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Participant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/Question.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Question.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/Quiz.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Quiz.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/QuizController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/QuizController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/CreateQuiz.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/JoinQuiz.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/JoinQuiz.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/Scoreboard.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/Scoreboard.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/Stylesheet.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/Stylesheet.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/TakeQuiz.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/TakeQuiz.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.2.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/quizTime.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/img/quizTime.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/QuizService.java" afterPath="$PROJECT_DIR$/src/main/java/services/QuizService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/CreateQuiz.html" afterPath="$PROJECT_DIR$/src/main/webapp/CreateQuiz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/JoinQuiz.html" afterPath="$PROJECT_DIR$/src/main/webapp/JoinQuiz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Scoreboard.html" afterPath="$PROJECT_DIR$/src/main/webapp/Scoreboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/TakeQuiz.html" afterPath="$PROJECT_DIR$/src/main/webapp/TakeQuiz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/TakeQuiz.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/TakeQuiz.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,27 +38,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TakeQuiz.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TakeQuiz.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/TakeQuiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="146" column="36" lean-forward="false" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
               <folding>
                 <element signature="e#0#51#0" expanded="false" />
-                <marker date="1506539756616" expanded="true" signature="2266:2714" ph="..." />
-                <marker date="1506539756616" expanded="true" signature="2309:2480" ph="..." />
-                <marker date="1506539756616" expanded="true" signature="2523:2691" ph="..." />
-                <marker date="1506539756616" expanded="true" signature="2769:3219" ph="..." />
-                <marker date="1506539756616" expanded="true" signature="2812:2983" ph="..." />
-                <marker date="1506539756616" expanded="true" signature="3026:3196" ph="..." />
-                <marker date="1506539756616" expanded="true" signature="3320:3405" ph="..." />
-                <marker date="1506539756616" expanded="true" signature="3337:3404" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="2266:2714" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="2309:2480" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="2523:2691" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="2769:3219" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="2812:2983" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="3026:3196" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="3320:3405" ph="..." />
+                <marker date="1506540480913" expanded="true" signature="3337:3404" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateQuiz.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateQuiz.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/CreateQuiz.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1900">
@@ -89,7 +71,7 @@
       <file leaf-file-name="JoinQuiz.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/JoinQuiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
+            <state relative-caret-position="579">
               <caret line="110" column="48" lean-forward="false" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="48" />
               <folding>
                 <element signature="e#0#51#0" expanded="false" />
@@ -170,12 +152,12 @@
       <file leaf-file-name="CreateQuiz.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="153" column="22" lean-forward="false" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
+            <state relative-caret-position="413">
+              <caret line="165" column="17" lean-forward="false" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="17" />
               <folding>
                 <element signature="e#0#51#0" expanded="false" />
-                <marker date="1506539756679" expanded="true" signature="248:254" ph="..." />
-                <marker date="1506539756679" expanded="true" signature="254:4937" ph="..." />
+                <marker date="1506540444833" expanded="true" signature="248:254" ph="..." />
+                <marker date="1506540444833" expanded="true" signature="254:4937" ph="..." />
               </folding>
             </state>
           </provider>
@@ -191,6 +173,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>window.location.href</find>
+      <find>window.location.href</find>
+      <find>window.location.h</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -232,8 +221,8 @@
         <option value="$PROJECT_DIR$/src/main/java/entities/HelperClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/ActiveQuiz.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Quiz.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/JoinQuiz.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/TakeQuiz.js" />
       </list>
     </option>
@@ -533,7 +522,7 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Jobb/Ent3r/Stand 28.09.17/tictactoe_ai/TicTacToe/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test/QuizProsjekt/pom.xml" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -1023,7 +1012,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133380000" />
+    <option name="totallyTimeSpent" value="134558000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1036,7 +1025,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1058,11 +1047,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.49675676" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20689656" sideWeight="0.49567568" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27351353" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27351353" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34363854" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1070,7 +1060,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34363854" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1150,14 +1139,14 @@
           <caret line="91" column="23" lean-forward="false" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
           <folding>
             <element signature="e#0#51#0" expanded="false" />
-            <marker date="1506539756616" expanded="true" signature="2266:2714" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2309:2480" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2523:2691" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2769:3219" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2812:2983" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="3026:3196" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="3320:3405" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="3337:3404" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2266:2714" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2309:2480" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2523:2691" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2769:3219" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2812:2983" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="3026:3196" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="3320:3405" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="3337:3404" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1229,8 +1218,8 @@
           <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
           <folding>
             <element signature="e#0#51#0" expanded="false" />
-            <marker date="1506539756679" expanded="true" signature="248:254" ph="..." />
-            <marker date="1506539756679" expanded="true" signature="254:4937" ph="..." />
+            <marker date="1506540444833" expanded="true" signature="248:254" ph="..." />
+            <marker date="1506540444833" expanded="true" signature="254:4937" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1514,37 +1503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="153" column="22" lean-forward="false" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#51#0" expanded="false" />
-            <marker date="1506539756679" expanded="true" signature="248:254" ph="..." />
-            <marker date="1506539756679" expanded="true" signature="254:4937" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/JoinQuiz.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="110" column="48" lean-forward="false" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#51#0" expanded="false" />
-            <marker date="1506539756647" expanded="true" signature="442:588" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="952:982" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="952:1076" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="952:1099" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="952:1181" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="1737:1805" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="2077:2192" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="2915:2991" ph="..." />
-            <marker date="1506539756647" expanded="true" signature="3102:3203" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/Scoreboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -1562,29 +1520,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/TakeQuiz.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#51#0" expanded="false" />
-            <marker date="1506539756616" expanded="true" signature="2266:2714" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2309:2480" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2523:2691" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2769:3219" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="2812:2983" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="3026:3196" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="3320:3405" ph="..." />
-            <marker date="1506539756616" expanded="true" signature="3337:3404" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/CreateQuiz.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1900">
           <caret line="76" column="21" lean-forward="false" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/JoinQuiz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="110" column="48" lean-forward="false" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#51#0" expanded="false" />
+            <marker date="1506539756647" expanded="true" signature="442:588" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="952:982" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="952:1076" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="952:1099" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="952:1181" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="1737:1805" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="2077:2192" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="2915:2991" ph="..." />
+            <marker date="1506539756647" expanded="true" signature="3102:3203" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/CreateQuiz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="165" column="17" lean-forward="false" selection-start-line="165" selection-start-column="16" selection-end-line="165" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#51#0" expanded="false" />
+            <marker date="1506540444833" expanded="true" signature="248:254" ph="..." />
+            <marker date="1506540444833" expanded="true" signature="254:4937" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/TakeQuiz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="146" column="36" lean-forward="false" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#51#0" expanded="false" />
+            <marker date="1506540480913" expanded="true" signature="2266:2714" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2309:2480" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2523:2691" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2769:3219" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="2812:2983" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="3026:3196" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="3320:3405" ph="..." />
+            <marker date="1506540480913" expanded="true" signature="3337:3404" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

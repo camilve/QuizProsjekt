@@ -165,7 +165,7 @@ $(document).ready(function () {
                     console.log(e);
                 }
             });
-            window.location.href = "../CreateQuiz.html";
+            window.location.href = "CreateQuiz.html";
             alert("The quiz is created");
         }
     })
