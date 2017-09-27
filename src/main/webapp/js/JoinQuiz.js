@@ -37,6 +37,7 @@ $(document).ready(function () {
         });
     }
     getFutureQuizs();
+    //sets interval, so the table is updated
     var interval = setInterval(getFutureQuizs, 10000);
 
     getOngoingQuizzes();
@@ -79,6 +80,8 @@ function initScoreboard(id) {
     clearInterval(scoreboardInterval);
     scoreboardInterval = setInterval(seeScoreboard, 1000);
 }
+
+//opens a live scoreboard, which update every second
 function seeScoreboard() {
     if(quizId == null) return;
     $.get("rest/quiz/scoreboard/"+quizId, function (result) {
@@ -99,13 +102,13 @@ function seeScoreboard() {
     });
 }
 
+//adds a nickname to a quiz
 function joinNickname(id) {
     var person = prompt("Please enter your nickname:", "");
     if (person == null || person == "") {
         txt = "User cancelled the prompt.";
     } else {
-
-        $.post("rest/quiz/join/"+id+"/"+person)
+        $.post("rest/quiz/join/"+id+"/"+person);
         window.location.href = "TakeQuiz.html?id="+id+"&nickname="+person;
     }
 };

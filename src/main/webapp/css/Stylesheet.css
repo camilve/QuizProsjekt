@@ -24,3 +24,8 @@ tr:nth-child(even) {
 .content {
     width: 85%;
 }
+
+#showPicture {
+    height: 200px;
+    align-content: center;
+}

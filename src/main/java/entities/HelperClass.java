@@ -1,7 +1,11 @@
-package services;
+package entities;
 
 /**
  * Created by Camilla Velvin on 24.09.2017.
+ */
+
+/**
+ * Helperclass used to contain REST-parameter data in addPoint REST-method.
  */
 public class HelperClass {
     private String nickname;

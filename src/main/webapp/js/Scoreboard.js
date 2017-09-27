@@ -21,9 +21,9 @@ function findScoreboard(quizId) {
     $.get("rest/quiz/scoreboard/"+quizId, function (result) {
         $("#scoreboard").html("");
         $("#scoreboard").append(`<tr>
-                            <th>Nickname</th>
-                            <th>Points</th>
-                        </tr>`);
+    <th>Nickname</th>
+    <th>Points</th>
+</tr>`);
         for(var i=0; i<result.length; i++) {
             $("#scoreboard").append(`
                <tr>

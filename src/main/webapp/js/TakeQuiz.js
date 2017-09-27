@@ -10,6 +10,7 @@ $(document).ready(function () {
         setTimer(data);
     });
 
+    //count down to quiz start
     function setTimer(data) {
         var timeInterval = setInterval(function () {
             var today = new Date();
@@ -143,7 +144,7 @@ $(document).ready(function () {
         } else {
             $("#showQuestion").append(``);
             $("#showPicture").append(``);
-            window.location.href = "JoinQuiz.html";
+            window.location.href = "../JoinQuiz.html";
         }
     };
 

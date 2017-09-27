@@ -1,9 +1,13 @@
-package services;
+package entities;
 
 import java.util.*;
 
 /**
  * Created by Camilla Velvin on 14.09.2017.
+ */
+
+/**
+ * An active quiz is a quiz with participants and id.
  */
 public class ActiveQuiz {
     private Quiz quiz;
@@ -33,12 +37,12 @@ public class ActiveQuiz {
 
     public void givePoints(String nickname, int answer, int questionNumber) {
         int[] correctAnswers = quiz.getQuestions()[questionNumber].getCorrect();
-        for(int j=0; j<correctAnswers.length; j++) {
-            if(correctAnswers[j] == answer) {
-                for(int i=0; i<quizzers.size(); i++) {
-                    if(quizzers.get(i).getNickname().equals(nickname)) {
-                        int point = quizzers.get(i).getPoints();
-                        quizzers.get(i).setPoints(point+1);
+        for (int correctAnswer : correctAnswers) {
+            if (correctAnswer == answer) {
+                for (Participant quizzer : quizzers) {
+                    if (quizzer.getNickname().equals(nickname)) {
+                        int point = quizzer.getPoints();
+                        quizzer.setPoints(point + 1);
                     }
                 }
             }

@@ -4,6 +4,7 @@
 var idCounter = 2;
 $(document).ready(function () {
     $("#addQuestion").click(function () {
+        //appears new question, with answer options and time selection
         $("#questions").append(`      
             <hr>
             <div class="row">
@@ -127,10 +128,13 @@ $(document).ready(function () {
                 correct.push(4);
             }
 
+            //checks if the user has selected a correct answer
             if (correct.length == 0) {
                 alert("Please add a correct answer");
                 allCorrect = false;
             }
+
+            //checks if the user has typed in all relevant information.
             if ($("#question-" + i).val() == "" || $("#QuizName").val() == "" || $("#timepicker").val() == "" ||
                 $("#answer1-" + i).val() == "" || $("#answer2-" + i).val() == "") {
                 alert("Type in all the information! :-)");
@@ -147,7 +151,7 @@ $(document).ready(function () {
         if(allCorrect) {
             var quiz = {"quiz": {"quizName": $("#QuizName").val(), "questions": params, "tid": $("#timepicker").val()}};
 
-
+            //add quiz
             $.ajax({
                 url: 'rest/quiz',
                 type: 'POST',
@@ -161,7 +165,7 @@ $(document).ready(function () {
                     console.log(e);
                 }
             });
-            window.location.href = "CreateQuiz.html";
+            window.location.href = "../CreateQuiz.html";
             alert("The quiz is created");
         }
     })

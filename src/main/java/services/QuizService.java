@@ -1,5 +1,10 @@
 package services;
 
+import controllers.QuizController;
+import entities.ActiveQuiz;
+import entities.HelperClass;
+import entities.Participant;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;

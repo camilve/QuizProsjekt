@@ -1,4 +1,4 @@
-package services;
+package entities;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,10 +26,10 @@ public class Quiz {
         try {
             date = format.parse(quizdate);
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
-        for(int i=0; i<questions.length; i++) {
-            date.setSeconds(date.getSeconds() + questions[i].getSeconds());
+        for (Question question : questions) {
+            date.setSeconds(date.getSeconds() + question.getSeconds());
         }
         endTime = date;
     }
@@ -63,6 +63,8 @@ public class Quiz {
     public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
+
+    // calculates the end time for the quiz, based on start time and time on each question.
     public void addEndTime() {
         String quizdate = tid;
         quizdate = quizdate.replace("T", " ");
@@ -71,10 +73,10 @@ public class Quiz {
         try {
             date = format.parse(quizdate);
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
-        for(int i=0; i<questions.length; i++) {
-            date.setSeconds(date.getSeconds() + questions[i].getSeconds());
+        for (Question question : questions) {
+            date.setSeconds(date.getSeconds() + question.getSeconds());
         }
         endTime = date;
     }

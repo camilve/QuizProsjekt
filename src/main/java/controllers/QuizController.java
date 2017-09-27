@@ -1,4 +1,6 @@
-package services;
+package controllers;
+
+import entities.ActiveQuiz;
 
 import java.text.SimpleDateFormat;
 import java.util.*;

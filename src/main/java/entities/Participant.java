@@ -1,4 +1,4 @@
-package services;
+package entities;
 
 /**
  * Created by Camilla Velvin on 20.09.2017.
