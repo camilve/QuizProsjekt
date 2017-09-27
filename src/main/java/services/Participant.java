@@ -25,6 +25,6 @@ public class Participant implements Comparable<Participant> {
     }
 
     public int compareTo(Participant o) {
-        return points - o.getPoints();
+        return o.getPoints() - points;
     }
 }

@@ -2,7 +2,6 @@ package services;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,11 +12,25 @@ public class QuizService {
 
     private static QuizController quizController = new QuizController();
 
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<ActiveQuiz> getAllQuizs() {
+    public List<ActiveQuiz> getAllQuizzes() {
         return quizController.getActiveQuizs();
+    }
+
+
+    @GET
+    @Path("/previous")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<ActiveQuiz> getPreviousQuizzes() {
+        return quizController.getPreviousActiveQuizs();
+    }
+
+    @GET
+    @Path("/ongoing")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<ActiveQuiz> getOngoingQuizs() {
+        return quizController.getOngoingQuizzes();
     }
 
     @GET
@@ -28,24 +41,50 @@ public class QuizService {
     }
 
 
+    @GET
+    @Path("/specificQuiz/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ActiveQuiz findActiveQuiz(@PathParam("id") String id) {
+        return quizController.findActiveQuiz(id);
+    }
+
     @POST
     public String addActiveQuiz(ActiveQuiz activeQuiz) {
+        activeQuiz.getQuiz().addEndTime();
         quizController.addActiveQuiz(activeQuiz);
         return activeQuiz.getId();
     }
 
-    @PUT
-    @Path("/join")
+    @POST
+    @Path("/join/{id}/{nickname}")
     @Consumes (MediaType.APPLICATION_FORM_URLENCODED)
-    @Produces (MediaType.APPLICATION_JSON)
-    public boolean addParticipants(@FormParam("nickname") String nickname, @FormParam("id") String id) {
+    public void addParticipants(@PathParam("nickname") String nickname, @PathParam("id") String id) {
         for (ActiveQuiz quiz : quizController.getActiveQuizs()) {
             if(quiz.getId().equals(id)) {
                 quiz.addParticipant(nickname);
-                return true;
             }
         }
-        return false;
+    }
+    @POST
+    @Path("/join/point")
+    public void addPoints(HelperClass helperClass) {
+        for (ActiveQuiz quiz : quizController.getActiveQuizs()) {
+            if(quiz.getId().equals(helperClass.getId())) {
+                quiz.givePoints(helperClass.getNickname(), helperClass.getAnswer(), helperClass.getQuestionNumber());
+            }
+        }
+    }
+
+    @GET
+    @Path("/scoreboard/{id}")
+    @Produces (MediaType.APPLICATION_JSON)
+    public List<Participant> getScoreboard(@PathParam("id") String id) {
+        for (ActiveQuiz quiz : quizController.getActiveQuizs()) {
+            if(quiz.getId().equals(id)) {
+                return quiz.scoreboard();
+            }
+        }
+        return null;
     }
 
 }

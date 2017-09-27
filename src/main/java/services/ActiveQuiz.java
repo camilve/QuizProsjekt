@@ -9,15 +9,13 @@ public class ActiveQuiz {
     private Quiz quiz;
     private String id;
     private ArrayList<Participant> quizzers = new ArrayList<Participant>(); //nickname with points
-    private int spmnr = 0;
-    private int questionCount;
 
     public ActiveQuiz() {
+        id = UUID.randomUUID().toString().replace("-", "");
     }
     public ActiveQuiz(Quiz quiz) {
         this.quiz = quiz;
         id = UUID.randomUUID().toString().replace("-", "");
-        questionCount = quiz.getQuestions().length;
     }
 
     public Quiz getQuiz() {
@@ -33,8 +31,8 @@ public class ActiveQuiz {
         quizzers.add(new Participant(nickname));
     }
 
-    public void givePoints(String nickname, int answer) {
-        int[] correctAnswers = quiz.getQuestions()[spmnr].getCorrect();
+    public void givePoints(String nickname, int answer, int questionNumber) {
+        int[] correctAnswers = quiz.getQuestions()[questionNumber].getCorrect();
         for(int j=0; j<correctAnswers.length; j++) {
             if(correctAnswers[j] == answer) {
                 for(int i=0; i<quizzers.size(); i++) {
@@ -46,17 +44,12 @@ public class ActiveQuiz {
             }
         }
     }
-    public void nextQuestion() {
-        if(spmnr < questionCount) {
-            spmnr++;
-        }
-    }
 
     public List<Participant> scoreboard() {
         ArrayList<Participant> scoreBoard = quizzers;
 
         Collections.sort(scoreBoard);
-        int length = 4;
+        int length = 5;
         if(length > scoreBoard.size()) {
             length = scoreBoard.size();
         }

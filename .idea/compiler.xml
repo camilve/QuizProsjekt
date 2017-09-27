@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="QuizProsjekt" />
         <module name="rest-template" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="QuizProsjekt" target="1.5" />
       <module name="rest-template" target="1.5" />
     </bytecodeTargetLevel>
   </component>

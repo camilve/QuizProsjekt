@@ -8,10 +8,10 @@ public class Question {
     private String[] answers;
     private int[] correct;
     private String url;
-    double seconds;
+    private int seconds;
 
     public Question() {}
-    public Question(String question, String[] answers, int[] correct, String url, double seconds) {
+    public Question(String question, String[] answers, int[] correct, String url, int seconds) {
         this.question = question;
         this.answers = answers;
         this.correct = correct;
@@ -51,11 +51,11 @@ public class Question {
         this.url = url;
     }
 
-    public double getSeconds() {
+    public int getSeconds() {
         return seconds;
     }
 
-    public void setSeconds(double seconds) {
+    public void setSeconds(int seconds) {
         this.seconds = seconds;
     }
 }

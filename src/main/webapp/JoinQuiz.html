@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="Stylesheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="jquery-3.2.1.min.js"></script>
@@ -11,27 +11,47 @@
 </head>
 <body>
 <div id="menu">
-    <ul>
-        <!-- <li><div id="pictureMenu"><img src="quiz.jpg"></div></li>-->
-        <li><a href="CreateQuiz.html">Create quiz</a></li>
-        <li><a href="JoinQuiz.html" class="active">Join quiz</a></li>
-        <li><a href="">See scoreboard</a></li>
-    </ul>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Quizzers</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="CreateQuiz.html">Create quiz</a></li>
+                <li class="active"><a href="JoinQuiz.html">Join quiz</a></li>
+                <li><a href="Scoreboard.html">See scoreboard</a></li>
+            </ul>
+        </div>
+    </nav>
 </div>
-<div>
+<div class="content container">
     <div>
-        <h1>Click on a quiz to join </h1>
+        <h1></h1>
     </div>
     <div>
-        <table>
+        <h2>Future quizzes</h2>
+        <table id="futureQuiz">
             <tr>
                 <th>Quizname</th>
                 <th>Start time</th>
+                <th></th>
             </tr>
-            <tr class="clickable-row" data-hfref="CreateQuiz.html">
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
+        </table>
+        <br>
+        <br>
+        <h2>Ongoing quizzes</h2>
+        <p>(click to see live scoreboard)</p>
+        <table id="ongoingQuizzes">
+            <tr>
+                <th>Quizname</th>
             </tr>
+        </table>
+    </div>
+    <div>
+        <br>
+        <h5>Live scoreboard:</h5>
+        <table id="liveScoreboard">
+
         </table>
     </div>
 </div>

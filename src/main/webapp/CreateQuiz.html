@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="Stylesheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="CreateQuiz.js"></script>
@@ -13,47 +14,59 @@
 
 <div>
     <div id="menu">
-        <ul>
-            <!-- <li><div id="pictureMenu"><img src="quiz.jpg"></div></li>-->
-            <li><a href="CreateQuiz.html" class="active">Create quiz</a></li>
-            <li><a href="JoinQuiz.html">Join quiz</a></li>
-            <li><a href="">See scoreboard</a></li>
-        </ul>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Quizzers</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="CreateQuiz.html">Create quiz</a></li>
+                    <li><a href="JoinQuiz.html">Join quiz</a></li>
+                    <li><a href="Scoreboard.html">See scoreboard</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <div class="content">
+
+    <div class="container content">
         <h1>Create new quiz</h1>
         <br>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-8">
                 <h3>Quizname: </h3>
-                <input id="QuizName" class="inputfieldQuiz">
+                <input id="QuizName" class="inputfieldQuiz form-control">
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-8">
                 <h3>Start time: </h3>
-                <input id="timepicker" class="inputfieldQuiz" value="yyyy-mm-dd hh:mm" />
+                <input id="timepicker" class="inputfieldQuiz form-control" type="datetime-local" />
             </div>
         </div>
         <div id="questions" class="container-fluid bg-3 text-center">
             <div class="row">
                 <div class="col-sm-8">
-                    <h3>Question 1: <input type="text" id="question-1"> </h3>
+                        <h3>Question 1: <input type="text" id="question-1"> </h3>
                     <label>(Check of the correct answers)</label>
                 </div>
+
                 <div class="col-sm-4">
                     <br>
-                    <label>Time (seconds): </label>
-                    <select id="timeQuestion-1">
-                        <option value="10">10 sec</option>
-                        <option value="20">20 sec</option>
-                        <option value="30">30 sec</option>
-                        <option value="40">40 sec</option>
-                        <option value="50">50 sec</option>
-                        <option value="60">60 sec</option>
-                    </select>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3">Time (seconds):</label>
+                            <div class="col-sm-8">
+                                <select id="timeQuestion-1" class="form-control">
+                                    <option value="10">10 sec</option>
+                                    <option value="20">20 sec</option>
+                                    <option value="30">30 sec</option>
+                                    <option value="40">40 sec</option>
+                                    <option value="50">50 sec</option>
+                                    <option value="60">60 sec</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <br>
@@ -61,35 +74,84 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    <label>Answer 1: </label>
-                    <input name="correctAnswer" type="text" id="answer1-1">
-                    <input name="correctAnswer1-1" type="checkbox">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3">Answer 1:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="answer1-1" />
+                            </div>
+                            <div class="col-sm-1">
+                                <input name="correctAnswer1-1" type="checkbox" id="correct1-1" checked>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-sm-6">
-                    <label>Answer 2: </label>
-                    <input name="correctAnswer" type="text" id="answer2-1">
-                    <input name="correctAnswer2-1" type="checkbox">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3">Answer 2:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="answer2-1" />
+                            </div>
+                            <div class="col-sm-1">
+                                <input name="correctAnswer1-1" type="checkbox" id="correct2-1">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <label>Answer 3: </label>
-                    <input name="correctAnswer" type="text" id="answer3-1">
-                    <input name="correctAnswer3-1" type="checkbox">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3">Answer 3:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="answer3-1" />
+                            </div>
+                            <div class="col-sm-1">
+                                <input name="correctAnswer1-1" type="checkbox" id="correct3-1">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-sm-6">
-                    <label>Answer 4: </label>
-                    <input name="correctAnswer" type="text" id="answer4-1">
-                    <input name="correctAnswer4-1" type="checkbox">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3">Answer 4:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="answer4-1" />
+                            </div>
+                            <div class="col-sm-1">
+                                <input name="correctAnswer1-1" type="checkbox" id="correct4-1">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4">URL for picture: </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="url-1" />
+                            </div>
+
+                        </div>
+                    </form>
+                    <br>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
-                <input type="submit" value="Add question" id="addQuestion">
+            <div class="col-sm-8">
+                <input type="submit" class="btn btn-info" value="+ Add question" id="addQuestion">
             </div>
+            <br>
             <div class="col-sm-12">
-                <input type="submit" value="Finish!" id="addQuiz" style="width: 100%;">
+                <input type="submit" class="btn btn-success" value="Finish!" id="addQuiz" style="width: 100%;">
                 <br>
                 <br>
             </div>
