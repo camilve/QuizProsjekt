@@ -11,11 +11,12 @@ public class Quiz {
     private Question[] questions;
     private String tid;
     private Date endTime;
+    private String[] ages = new String[5];
 
     public Quiz() {
 
     }
-    public Quiz(String quizName, Question[] questions, String tid) {
+    public Quiz(String quizName, Question[] questions, String tid, String[] ages) {
         this.quizName = quizName;
         this.questions = questions;
         this.tid = tid;
@@ -32,6 +33,7 @@ public class Quiz {
             date.setSeconds(date.getSeconds() + question.getSeconds());
         }
         endTime = date;
+        this.ages = ages;
     }
     public Question[] getQuestions() {
         return questions;
@@ -81,4 +83,16 @@ public class Quiz {
         endTime = date;
     }
 
+    public String[] getAges() {
+        return ages;
+    }
+
+    public void setAges(String[] ages) {
+        if(ages.length ==5 ) {
+            this.ages = new String[1];
+            this.ages[0] = "All ages!";
+        } else {
+            this.ages = ages;
+        }
+    }
 }

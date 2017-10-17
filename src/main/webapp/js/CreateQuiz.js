@@ -41,7 +41,7 @@ $(document).ready(function () {
                         <div class="form-group">
                             <label class="col-sm-3">Answer 1:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="answer1-${idCounter}" />
+                                <input type="text" class="form-control" id="answer1-${idCounter}" placeholder="Required"/>
                             </div>
                             <div class="col-sm-1">
                                 <input name="correctAnswer1-1" type="checkbox" id="correct1-${idCounter}" checked>
@@ -54,7 +54,7 @@ $(document).ready(function () {
                         <div class="form-group">
                             <label class="col-sm-3">Answer 2:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="answer2-${idCounter}" />
+                                <input type="text" class="form-control" id="answer2-${idCounter}" placeholder="Required"/>
                             </div>
                             <div class="col-sm-1">
                                 <input name="correctAnswer1-1" type="checkbox" id="correct2-${idCounter}">
@@ -99,7 +99,7 @@ $(document).ready(function () {
                         <div class="form-group">
                             <label class="col-sm-4">URL for picture: </label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="url-${idCounter}" />
+                                <input type="text" class="form-control" id="url-${idCounter}" placeholder="Optional"/>
                             </div>
 
                         </div>
@@ -110,9 +110,32 @@ $(document).ready(function () {
               `);
         idCounter++;
     });
-    var allCorrect = true;
+
     $("#addQuiz").click(function () {
+        var allCorrect = true;
         var params = [];
+        var ages = [];
+        if ($("#elders").is(":checked")) {
+            ages.push("Elders");
+        }
+        if ($("#middleAge").is(":checked")) {
+            ages.push("Middle age");
+        }
+        if ($("#teens").is(":checked")) {
+            ages.push("Teens");
+        }
+        if ($("#children").is(":checked")) {
+            ages.push("Children");
+        }
+        if ($("#toddlers").is(":checked")) {
+            ages.push("Toddlers");
+        }
+
+        if(ages.length == 0) {
+            alert("Choose appropriate ages");
+            allCorrect= false;
+        }
+
         for(var i=1; i<idCounter; i++) {
             var correct = [];
             if ($("#correct1-" + i).is(":checked")) {
@@ -130,7 +153,7 @@ $(document).ready(function () {
 
             //checks if the user has selected a correct answer
             if (correct.length == 0) {
-                alert("Please add a correct answer");
+                alert("Choose a correct answer");
                 allCorrect = false;
             }
 
@@ -139,6 +162,8 @@ $(document).ready(function () {
                 $("#answer1-" + i).val() == "" || $("#answer2-" + i).val() == "") {
                 alert("Type in all the information! :-)");
                 allCorrect = false;
+            } else if (!allCorrect) {
+
             } else {
                 allCorrect = true;
                 params.push({
@@ -149,7 +174,7 @@ $(document).ready(function () {
             }
         }
         if(allCorrect) {
-            var quiz = {"quiz": {"quizName": $("#QuizName").val(), "questions": params, "tid": $("#timepicker").val()}};
+            var quiz = {"quiz": {"quizName": $("#QuizName").val(), "questions": params, "tid": $("#timepicker").val(), "ages": ages}};
 
             //add quiz
             $.ajax({

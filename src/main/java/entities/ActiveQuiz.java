@@ -31,6 +31,15 @@ public class ActiveQuiz {
     public String getId (){
         return id;
     }
+
+    public ArrayList<Participant> getQuizzers() {
+        return quizzers;
+    }
+
+    public void setQuizzers(ArrayList<Participant> quizzers) {
+        this.quizzers = quizzers;
+    }
+
     public void addParticipant(String nickname) {
         quizzers.add(new Participant(nickname));
     }

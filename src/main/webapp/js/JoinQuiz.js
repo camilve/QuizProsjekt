@@ -12,14 +12,20 @@ $(document).ready(function () {
                 var startTime;
 
                 $("#futureQuiz").html("");
+                $("#findQuizzes").html("");
                 $("#futureQuiz").append(`
                     <tr>
-                        <th>Quizname</th>
-                        <th>Start time</th>
-                        <th></th>
+                        <th style="width: 25%">Quizname </th>
+                        <th style="width: 25%">Appropriate for</th>
+                        <th style="width: 20%">Start time</th>
+                        <th style="width: 10%">Number of questions</th>
+                        <th style="width: 10%">Participants</th>
+                        <th style="width: 10%">Click to join a quiz</th>                       
                     </tr>`);
 
                 quizFuture = result.length;
+
+
                 for (var i = 0; i < result.length; i++) {
                     quizName = result[i].quiz.quizName;
                     startTime = result[i].quiz.tid;
@@ -28,11 +34,19 @@ $(document).ready(function () {
 
                     $("#futureQuiz").append(`<tr class="clickable-row${i}" data-hfref="CreateQuiz.html">
                         <td>${quizName}</td>
+                        <td>${result[i].quiz.ages}</td>
                         <td>${startTime}</td>
-                        <td><a onclick="joinNickname('${quizId}')" href="#" id="joinQuizNickname">Join</a></td>
+                        <td>${result[i].quiz.questions.length}</td>
+                        <td>${result[i].quizzers.length}</td>
+                        <td><a onclick="joinNickname('${quizId}')" href="#" id="joinQuizNickname">Join</a></td>                       
                     </tr>
                     `);
                 }
+            }
+            if(result.length ==0) {
+                $("#findQuizzes").append(`<div>
+                    There are no future quizzes, <a href="CreateQuiz.html">create</a> one </div>
+                    `);
             }
         });
     }

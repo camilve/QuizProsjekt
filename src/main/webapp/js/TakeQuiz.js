@@ -15,12 +15,16 @@ $(document).ready(function () {
         var timeInterval = setInterval(function () {
             var today = new Date();
             var quizTime = new Date(data.quiz.tid);
+            console.log(data.quiz.quizName);
             var timeToQuiz = quizTime - today;
             var days = Math.floor(timeToQuiz / (1000 * 60 * 60 * 24));
             var hours = Math.floor((timeToQuiz % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((timeToQuiz % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((timeToQuiz % (1000 * 60)) / 1000);
-            $("#showQuestion").html(`<h2>Time left to quiz: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds</h2>`);
+            $("#showQuestion").html(`
+            <div><h3>You have joined: ${data.quiz.quizName}</h3><p>Hope you have fun!</p></div>
+            <br> <br>
+            <h4>Time left to quiz: ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds</h4>`);
             if(quizTime-today <=0) {
                 clearInterval(timeInterval);
                 setQuestions(data);

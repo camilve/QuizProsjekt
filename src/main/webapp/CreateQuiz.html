@@ -40,9 +40,22 @@
         <div class="row">
             <div class="col-sm-8">
                 <h3>Start time: </h3>
+                <p>(It is impossible to join the quiz after it has started)</p>
                 <input id="timepicker" class="inputfieldQuiz form-control" type="datetime-local" />
             </div>
         </div>
+        <div>
+            <div>
+                <br>
+                <label>Appropriate for: </label>
+                <p><input id="elders" type="checkbox" checked>Elders</p>
+                <p><input id="middleAge" type="checkbox">Middle Age</p>
+                <p><input id="teens" type="checkbox">Teens</p>
+                <p><input id="children" type="checkbox">Children</p>
+                <p><input id="toddlers" type="checkbox">Toddlers</p>
+            </div>
+        </div>
+        <hr>
         <div id="questions" class="container-fluid bg-3 text-center">
             <div class="row">
                 <div class="col-sm-8">
@@ -78,7 +91,7 @@
                         <div class="form-group">
                             <label class="col-sm-3">Answer 1:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="answer1-1" />
+                                <input type="text" class="form-control" id="answer1-1" placeholder="Required" />
                             </div>
                             <div class="col-sm-1">
                                 <input name="correctAnswer1-1" type="checkbox" id="correct1-1" checked>
@@ -91,7 +104,7 @@
                         <div class="form-group">
                             <label class="col-sm-3">Answer 2:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="answer2-1" />
+                                <input type="text" class="form-control" id="answer2-1" placeholder="Required" />
                             </div>
                             <div class="col-sm-1">
                                 <input name="correctAnswer1-1" type="checkbox" id="correct2-1">
@@ -136,7 +149,7 @@
                         <div class="form-group">
                             <label class="col-sm-4">URL for picture: </label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="url-1" />
+                                <input type="text" class="form-control" id="url-1" placeholder="Optional"/>
                             </div>
 
                         </div>
